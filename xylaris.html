@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Xylaris - Alien Ocean World</title>
+</head>
+<body>
+    <header>
+        <h1>Xylaris</h1>
+        <p>An Alien Ocean World Sustained by Chemosynthesis</p>
+        <nav>
+            <ul>
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#energy-source">Energy Source</a></li>
+                <li><a href="#life-forms">Life Forms</a></li>
+                <li><a href="#geological-features">Geological Features</a></li>
+                <li><a href="#data-visualization">Data Visualization</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Discover the Wonders of Xylaris</h2>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <h2>About Xylaris</h2>
+        <p>Xylaris is an alien ocean world deep within our galaxy, thriving without sunlight. It features:</p>
+        <ul>
+            <li>Thick ice covering a vast ocean.</li>
+            <li>Life sustained by chemosynthesis from hydrothermal vents.</li>
+            <li>Extreme conditions similar to icy moons like Europa.</li>
+        </ul>
+    </section>
+
+    <section id="energy-source" class="energy-source">
+        <h2>Energy Source</h2>
+        <p>The primary energy source on Xylaris is chemosynthesis:</p>
+        <ul>
+            <li>Organisms convert hydrogen sulfide (H₂S) and methane from hydrothermal vents into energy.</li>
+            <li>Microorganisms thrive at the ocean floor, enabling a unique ecosystem in darkness.</li>
+        </ul>
+        <img src="https://pixabay.com/photos/microbiology-bacteria-microscope-2170434/" alt="Chemosynthetic Organism" />
+        <p><strong>Image:</strong> Chemosynthetic bacteria thriving in extreme conditions.</p>
+    </section>
+
+    <section id="life-forms" class="life-forms">
+        <h2>Potential Life Forms</h2>
+        <p>The ecosystem could include diverse life forms, such as:</p>
+        <ul>
+            <li>Microbial communities at hydrothermal vents.</li>
+            <li>Complex organisms adapting to high-pressure environments.</li>
+        </ul>
+        <img src="https://pixabay.com/photos/octopus-ocean-underwater-creature-2940548/" alt="Underwater Creature" />
+        <p><strong>Image:</strong> Potential underwater life form in Xylaris.</p>
+    </section>
+
+    <section id="geological-features" class="geological-features">
+        <h2>Geological Features</h2>
+        <p>Xylaris features:</p>
+        <ul>
+            <li>Hydrothermal vents providing energy.</li>
+            <li>Volcanic activity influencing the ocean's chemistry.</li>
+        </ul>
+        <img src="https://unsplash.com/photos/5uRrMkwDg-8" alt="Hydrothermal Vents" />
+        <p><strong>Image:</strong> Hydrothermal vents similar to those on Xylaris.</p>
+    </section>
+
+    <section id="data-visualization" class="data-visualization">
+        <h2>Data Visualization</h2>
+        <canvas id="lifeChart" width="400" height="200"></canvas>
+        <script>
+            const ctx = document.getElementById('lifeChart').getContext('2d');
+            const lifeChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Hydrogen Sulfide', 'Methane', 'Oxygen', 'Nutrients'],
+                    datasets: [{
+                        label: 'Life Sustaining Elements',
+                        data: [75, 50, 25, 40],
+                        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)'],
+                        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </section>
+
+    <footer>
+        <p>Explore more about ocean worlds: <a href="https://www.nasa.gov/specials/ocean-worlds/">NASA Ocean Worlds</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
